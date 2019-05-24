@@ -18,31 +18,30 @@ import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
 // core components
-import GridItem from "components/Grid/GridItem.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import Table from "components/Table/Table.jsx";
-import Tasks from "components/Tasks/Tasks.jsx";
-import CustomTabs from "components/CustomTabs/CustomTabs.jsx";
-import Danger from "components/Typography/Danger.jsx";
-import Card from "components/Card/Card.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardIcon from "components/Card/CardIcon.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import CardAvatar from "components/Card/CardAvatar.jsx";
-import avatar from "assets/img/faces/marc.jpg";
-import Button from "components/CustomButtons/Button.jsx";
+import GridItem from "../../components/Grid/GridItem.jsx";
+import GridContainer from "../../components/Grid/GridContainer.jsx";
+import Table from "../../components/Table/Table.jsx";
+import Tasks from "../../components/Tasks/Tasks.jsx";
+import CustomTabs from "../../components/CustomTabs/CustomTabs.jsx";
+import Card from "../../components/Card/Card.jsx";
+import CardHeader from "../../components/Card/CardHeader.jsx";
+import CardIcon from "../../components/Card/CardIcon.jsx";
+import CardBody from "../../components/Card/CardBody.jsx";
+import CardFooter from "../../components/Card/CardFooter.jsx";
+import CardAvatar from "../../components/Card/CardAvatar.jsx";
+import avatar from "../../assets/img/faces/marc.jpg";
+import Button from "../../components/CustomButtons/Button.jsx";
 
 
-import { bugs, website, server } from "variables/general.jsx";
+import { bugs, website, server } from "../../variables/general.jsx";
 
 import {
   dailySalesChart,
   emailsSubscriptionChart,
   completedTasksChart
-} from "variables/charts.jsx";
+} from "../../variables/charts.jsx";
 
-import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
 
 class Dashboard extends React.Component {
   state = {
@@ -60,29 +59,30 @@ class Dashboard extends React.Component {
     return (
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={8}>
+
+           <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <h4 className={classes.cardTitleWhite}>childrens</h4>
                 <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
+                  children's informations 
                 </p>
               </CardHeader>
               <CardBody>
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["ID", "FirstName", "LastName"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                    ["1", "Dakota Rice", "Niger"],
+                    ["2", "Minerva Hooper","Curaçao"],
+                    ["3", "Sage Rodriguez", "Netherlands"],
+                    ["4", "Philip Chaney","Korea, South"]
                   ]}
                 />
               </CardBody>
             </Card>
           </GridItem>
-          
+
           <GridItem xs={12} sm={12} md={4}>
             <Card profile>
               <CardAvatar profile>
@@ -99,23 +99,47 @@ class Dashboard extends React.Component {
                   I love Rick Owens’ bed design but the back is...
               </p>
                 <Button color="primary" round>
-                  Follow
+                  Update informations
               </Button>
               </CardBody>
             </Card>
           </GridItem>
+
           <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <h4 className={classes.cardTitleWhite}>Installed Applications</h4>
                 <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
+                  installed applications on your phone
                 </p>
               </CardHeader>
               <CardBody>
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["ID", "Name", "Version", "Type"]}
+                  tableData={[
+                    ["1", "Dakota Rice", "$36,738", "Niger"],
+                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
+                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
+                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                  ]}
+                />
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={8}>
+            <Card>
+              <CardHeader color="warning">
+                <h4 className={classes.cardTitleWhite}>Tutor's choice(not installed yet)</h4>
+                <p className={classes.cardCategoryWhite}>
+                  Suggested applications to install
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Table
+                  tableHeaderColor="warning"
+                  tableHead={["ID", "Name", "Version", "Type"]}
                   tableData={[
                     ["1", "Dakota Rice", "$36,738", "Niger"],
                     ["2", "Minerva Hooper", "$23,789", "Curaçao"],
