@@ -105,8 +105,6 @@ class Dashboard extends React.Component {
             <div className={classes.content}>
               <div className={classes.container}>{switchRoutes}</div>
             </div>
-          {this.getRoute() ? <Footer /> : null}
-          
         </div>
       </div>
     );

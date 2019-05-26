@@ -30,7 +30,7 @@ import CardHeader from "../../components/Card/CardHeader.jsx";
 import CardBody from "../../components/Card/CardBody.jsx";
 //import CardFooter from "../../components/Card/CardFooter.jsx";
 import CardAvatar from "../../components/Card/CardAvatar.jsx";
-import avatar from "../../assets/img/faces/marc.jpg";
+import avatar from "../../assets/img/faces/morty.png";
 import Button from "../../components/CustomButtons/Button.jsx";
 
 
@@ -76,10 +76,9 @@ class Dashboard extends React.Component {
                   tableHeaderColor="warning"
                   tableHead={["ID", "FirstName", "LastName"]}
                   tableData={[
-                    ["1", "Abdellah", "to"],
-                    ["2", "Minerva Hooper","Curaçao"],
-                    ["3", "Sage Rodriguez", "Netherlands"],
-                    ["4", "Philip Chaney","Korea, South"]
+                    ["1", "Toto", "TaTa"],
+                    ["2", "BOBO","BABA"],
+                    ["3", "LOLO", "LALA"],
                   ]}
                 />
               </CardBody>
@@ -94,12 +93,11 @@ class Dashboard extends React.Component {
                 </a>
               </CardAvatar>
               <CardBody profile>
-                <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-                <h4 className={classes.cardTitle}>Alec Thompson</h4>
+                <h6 className={classes.cardCategory}>Kid</h6>
+                <h4 className={classes.cardTitle}>Toto Tata</h4>
                 <p className={classes.description}>
-                  Don't be scared of the truth because we need to restart the
-                  human foundation in truth And I love you like Kanye loves Kanye
-                  I love Rick Owens’ bed design but the back is...
+                  What the mentor is saying about the kid. He is Creative and he is 
+                  improving so much. 
               </p>
                 <Button color="primary" round>
                   Update informations
