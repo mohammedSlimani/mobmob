@@ -76,7 +76,7 @@ class Dashboard extends React.Component {
                   tableHeaderColor="warning"
                   tableHead={["ID", "FirstName", "LastName"]}
                   tableData={[
-                    ["1", "Dakota Rice", "Niger"],
+                    ["1", "Abdellah", "to"],
                     ["2", "Minerva Hooper","Curaçao"],
                     ["3", "Sage Rodriguez", "Netherlands"],
                     ["4", "Philip Chaney","Korea, South"]
@@ -117,16 +117,18 @@ class Dashboard extends React.Component {
                 </p>
               </CardHeader>
               <CardBody>
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Version", "Type"]}
-                  tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                  ]}
-                />
+                <List>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+
+                </List>
               </CardBody>
             </Card>
           </GridItem>
