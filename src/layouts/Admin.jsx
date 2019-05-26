@@ -17,7 +17,7 @@ import routes from "../routes.js";
 import dashboardStyle from "../assets/jss/material-dashboard-react/layouts/dashboardStyle.jsx";
 
 import image from "../assets/img/sidebar-2.jpg";
-import logo from "../assets/img/emobadara.png";
+import logo from "../assets/img/e-mob.ico";
 
 const switchRoutes = (
   <Switch>
