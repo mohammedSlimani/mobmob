@@ -16,7 +16,7 @@ import UserProfile from "./views/UserProfile/UserProfile.jsx";
 const dashboardRoutes = [
   {
     path: "/user",
-    name: "User Profile",
+    name: "Profile",
     icon: Person,
     component: UserProfile,
     layout: "/admin"
