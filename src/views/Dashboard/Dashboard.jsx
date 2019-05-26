@@ -43,6 +43,8 @@ import Button from "../../components/CustomButtons/Button.jsx";
 } from "../../variables/charts.jsx";
 */
 import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import { List, ListItem } from "@material-ui/core";
+import Apk from "../../components/Apk/Apk.js";
 
 class Dashboard extends React.Component {
   state = {
@@ -131,23 +133,25 @@ class Dashboard extends React.Component {
 
           <GridItem xs={12} sm={12} md={8}>
             <Card>
-              <CardHeader color="warning">
+              <CardHeader color="primary">
                 <h4 className={classes.cardTitleWhite}>Tutor's choice(not installed yet)</h4>
                 <p className={classes.cardCategoryWhite}>
                   Suggested applications to install
                 </p>
               </CardHeader>
               <CardBody>
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Version", "Type"]}
-                  tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                  ]}
-                />
+                <List>
+                  <ListItem>
+                    <Apk/>
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk/>
+                  </ListItem>
+                  
+                </List>
               </CardBody>
             </Card>
           </GridItem>
