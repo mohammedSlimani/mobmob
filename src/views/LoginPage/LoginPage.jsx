@@ -23,7 +23,7 @@ import loginPageStyle from "../../assets/jss/material-kit-react/views/loginPage.
 
 import image from "../../assets/img/bg10.jpg";
 
-const trans = { backgroundColor: "rgba(255,255,255,0.8)" }
+//const trans = { backgroundColor: "rgba(255,255,255,0.8)" }
 
 class LoginPage extends React.Component {
   constructor(props) {

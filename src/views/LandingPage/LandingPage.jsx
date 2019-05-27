@@ -19,8 +19,7 @@ import landingPageStyle from "../../assets/jss/material-kit-react/views/landingP
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
-import TeamSection from "./Sections/TeamSection.jsx";
-import WorkSection from "./Sections/WorkSection.jsx";
+import WorkSection from "./Sections/ContactsSection.jsx";
 
 const dashboardRoutes = [];
 
