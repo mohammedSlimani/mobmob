@@ -8,14 +8,15 @@ import Admin from "./layouts/Admin.jsx";
 
 import "./assets/css/material-dashboard-react.css?v=1.2.0";
 import LoginPage from "./views/LoginPage/LoginPage.jsx";
-
+import LandingPage from "./views/LandingPage/LandingPage"
 const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/login-page" component={LoginPage} />
+      <Route exact path="/login-page" component={LoginPage} />
       <Route path="/admin" component={Admin} />
+      <Route exact path="/" component={LandingPage} />
     </Switch>
   </Router>,
   document.getElementById("root")

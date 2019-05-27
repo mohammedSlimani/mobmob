@@ -23,6 +23,8 @@ import loginPageStyle from "../../assets/jss/material-kit-react/views/loginPage.
 
 import image from "../../assets/img/bg10.jpg";
 
+const trans = { backgroundColor: "rgba(255,255,255,0.8)" }
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
@@ -62,7 +64,7 @@ class LoginPage extends React.Component {
           <div className={classes.container}>
             <GridContainer justify="space-around" alignItems="center">
               <GridItem xs={12} sm={12} md={4}>
-                <Card className={classes[this.state.cardAnimaton]}>
+                <Card className={classes[this.state.cardAnimaton]} style={trans} >
                   <form className={classes.form}>
                     <CardHeader color="danger" className={classes.cardHeader}>
                       <h4>Login</h4>
@@ -111,7 +113,7 @@ class LoginPage extends React.Component {
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>
-                <Card className={classes[this.state.cardAnimaton]}>
+                <Card className={classes[this.state.cardAnimaton]} style={trans}>
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Register</h4>
