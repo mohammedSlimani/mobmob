@@ -73,7 +73,9 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <Button className={classes.title}>
+                            <img src={require('../../assets/img/e-mob.ico')} height='40' width='40'/> {brand}
+                          </Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
