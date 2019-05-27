@@ -35,22 +35,22 @@ function HeaderLinks({ ...props }) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
+            
+            Facebook
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/login-page">
+        
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
+            href="/login-page"
             className={classes.navLink}
           >
           Login
             
           </Button>
-        </Link>
+        
       </ListItem>
     </List>
   );

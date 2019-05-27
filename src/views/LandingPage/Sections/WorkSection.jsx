@@ -19,12 +19,10 @@ class WorkSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem cs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Work with us</h2>
+            <h2 className={classes.title}>Contact us</h2>
             <h4 className={classes.description}>
-              Divide details about your product or agency work into parts. Write
-              a few lines about each one and contact us about any further
-              collaboration. We will responde get back to you in a couple of
-              hours.
+              Do you have something you want to say to us? Maybe an idea, an improvement or a complaint?
+              We will be glad to talk to you and listen to what you have to say. Please fill in these infomration
             </h4>
             <form>
               <GridContainer>

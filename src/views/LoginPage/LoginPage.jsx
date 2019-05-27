@@ -64,7 +64,7 @@ class LoginPage extends React.Component {
           <div className={classes.container}>
             <GridContainer justify="space-around" alignItems="center">
               <GridItem xs={12} sm={12} md={4}>
-                <Card className={classes[this.state.cardAnimaton]} style={trans} >
+                <Card className={classes[this.state.cardAnimaton]}  >
                   <form className={classes.form}>
                     <CardHeader color="danger" className={classes.cardHeader}>
                       <h4>Login</h4>
@@ -113,7 +113,7 @@ class LoginPage extends React.Component {
                 </Card>
               </GridItem>
               <GridItem xs={12} sm={12} md={4}>
-                <Card className={classes[this.state.cardAnimaton]} style={trans}>
+                <Card className={classes[this.state.cardAnimaton]} >
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Register</h4>
