@@ -1,47 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-// react plugin for creating charts
-import ChartistGraph from "react-chartist";
 // @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
-import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-import Store from "@material-ui/icons/Store";
-import Warning from "@material-ui/icons/Warning";
-import DateRange from "@material-ui/icons/DateRange";
-import LocalOffer from "@material-ui/icons/LocalOffer";
-import Update from "@material-ui/icons/Update";
-import ArrowUpward from "@material-ui/icons/ArrowUpward";
-import AccessTime from "@material-ui/icons/AccessTime";
-import Accessibility from "@material-ui/icons/Accessibility";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
 // core components
 import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 import Table from "../../components/Table/Table.jsx";
-import Tasks from "../../components/Tasks/Tasks.jsx";
-import CustomTabs from "../../components/CustomTabs/CustomTabs.jsx";
 import Card from "../../components/Card/Card.jsx";
 import CardHeader from "../../components/Card/CardHeader.jsx";
-import CardIcon from "../../components/Card/CardIcon.jsx";
 import CardBody from "../../components/Card/CardBody.jsx";
-import CardFooter from "../../components/Card/CardFooter.jsx";
 import CardAvatar from "../../components/Card/CardAvatar.jsx";
-import avatar from "../../assets/img/faces/marc.jpg";
+import avatar from "../../assets/img/faces/morty.png";
 import Button from "../../components/CustomButtons/Button.jsx";
 
-
-import { bugs, website, server } from "../../variables/general.jsx";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "../../variables/charts.jsx";
-
 import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import { List, ListItem } from "@material-ui/core";
+import Apk from "../../components/Apk/Apk.js";
 
 class Dashboard extends React.Component {
   state = {
@@ -73,10 +47,9 @@ class Dashboard extends React.Component {
                   tableHeaderColor="warning"
                   tableHead={["ID", "FirstName", "LastName"]}
                   tableData={[
-                    ["1", "Dakota Rice", "Niger"],
-                    ["2", "Minerva Hooper","Curaçao"],
-                    ["3", "Sage Rodriguez", "Netherlands"],
-                    ["4", "Philip Chaney","Korea, South"]
+                    ["1", "Toto", "TaTa"],
+                    ["2", "BOBO","BABA"],
+                    ["3", "LOLO", "LALA"],
                   ]}
                 />
               </CardBody>
@@ -91,12 +64,11 @@ class Dashboard extends React.Component {
                 </a>
               </CardAvatar>
               <CardBody profile>
-                <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-                <h4 className={classes.cardTitle}>Alec Thompson</h4>
+                <h6 className={classes.cardCategory}>Kid</h6>
+                <h4 className={classes.cardTitle}>Toto Tata</h4>
                 <p className={classes.description}>
-                  Don't be scared of the truth because we need to restart the
-                  human foundation in truth And I love you like Kanye loves Kanye
-                  I love Rick Owens’ bed design but the back is...
+                  What the mentor is saying about the kid. He is Creative and he is 
+                  improving so much. 
               </p>
                 <Button color="primary" round>
                   Update informations
@@ -114,39 +86,43 @@ class Dashboard extends React.Component {
                 </p>
               </CardHeader>
               <CardBody>
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Version", "Type"]}
-                  tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                  ]}
-                />
+                <List>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+
+                </List>
               </CardBody>
             </Card>
           </GridItem>
 
           <GridItem xs={12} sm={12} md={8}>
             <Card>
-              <CardHeader color="warning">
+              <CardHeader color="primary">
                 <h4 className={classes.cardTitleWhite}>Tutor's choice(not installed yet)</h4>
                 <p className={classes.cardCategoryWhite}>
                   Suggested applications to install
                 </p>
               </CardHeader>
               <CardBody>
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Version", "Type"]}
-                  tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                  ]}
-                />
+                <List>
+                  <ListItem>
+                    <Apk/>
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk/>
+                  </ListItem>
+                  
+                </List>
               </CardBody>
             </Card>
           </GridItem>

@@ -13,7 +13,7 @@ import CardAvatar from "../../components/Card/CardAvatar.jsx";
 import CardBody from "../../components/Card/CardBody.jsx";
 import CardFooter from "../../components/Card/CardFooter.jsx";
 
-import avatar from "../../assets/img/faces/marc.jpg";
+import avatar from "../../assets/img/faces/me.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -131,7 +131,7 @@ function UserProfile(props) {
                 <GridItem xs={12} sm={12} md={12}>
                   <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
                   <CustomInput
-                    labelText="ex: I'm a father of two childerns.I'm using this WebSite for 3 months now and it's very helpful for my childrens."
+                    labelText="Tell us some stuff about your kids!"
                     id="about-me"
                     formControlProps={{
                       fullWidth: true
@@ -158,11 +158,11 @@ function UserProfile(props) {
             </CardAvatar>
             <CardBody profile>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
+              <h4 className={classes.cardTitle}>Slimani Mohammed</h4>
               <p className={classes.description}>
-                Don't be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+                Doing Stuff all the time! Stuff that makes other stuff look less stuffy,
+                than ever before. You are cool, He is cool, She is Cool! Everyone is cool.
+                 I am just cooler than everybody.
               </p>
               <Button color="primary" round>
                 Follow
