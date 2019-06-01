@@ -57,6 +57,7 @@ function CustomInput({ ...props }) {
           underline: underlineClasses
         }}
         id={id}
+        onChange={props.onChange}
         {...inputProps}
       />
       {error ? (

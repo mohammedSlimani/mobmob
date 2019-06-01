@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from"react-redux";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -23,16 +24,87 @@ import loginPageStyle from "../../assets/jss/material-kit-react/views/loginPage.
 
 import image from "../../assets/img/bg10.jpg";
 
+import validateInput from "./../../validations/signIn.js"
+import { userActions } from '../../actions';
+
+
 //const trans = { backgroundColor: "rgba(255,255,255,0.8)" }
 
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
+
+    // reset login status
+    this.props.dispatch(userActions.logout());
+
     // we use this to make the card to appear after the page has been rendered
     this.state = {
+      signIn:{
+        email:"",
+        password:"",
+        errors:{
+          email:"",
+          password:""
+        },
+        isLoading: false, 
+      },
+      signUp: {
+        first_name: "",
+        last_name: "",
+        email:"",
+        password:"",
+        errors: {},
+        isLoading: false,
+      },
       cardAnimaton: "cardHidden"
     };
+    this.isSignInValid = this.isSignInValid.bind(this);
   }
+
+  handleSignIn(event){
+    event.preventDefault();
+    console.log(this.state.signIn);
+    console.log("We need to validate and send data");
+    if (this.isSignInValid()){
+      this.setState({signIn:{errors:{},isLoading:true}});
+      const { dispatch } = this.props;
+      dispatch(userActions.login(this.state.signIn.email, this.state.signIn.password));
+    }
+  }
+
+  handleSignInInputChange(event){
+    const target = event.target;
+    console.log("inside handleInputChange");
+    console.log(target.id);
+    console.log(target.value);
+    this.setState({ signIn: { ...this.state.signIn, [target.id]: target.value } });
+  }
+
+  isSignInValid(){
+    const {errors, isValid } = validateInput(this.state.signIn)
+    console.log(isValid);
+    console.log(errors);
+    if(!isValid){
+      this.setState({ signIn: { ...this.state.signIn, errors: errors } });
+    }
+    return isValid;
+  }
+
+  handleSignUp(event) {
+    event.preventDefault();
+    console.log(this.state.signUp);
+    console.log("We need to validate and send data");
+  }
+
+  handleSignUpInputChange(event) {
+    const target = event.target;
+    console.log("inside handleInputChange");
+    console.log(target.id);
+    console.log(target.value);
+    this.setState({ signUp: { ...this.state.signUp, [target.id]: target.value } });
+  }
+
+
   componentDidMount() {
     // we add a hidden class to the card and after 700 ms we delete it and the transition appears
     setTimeout(
@@ -42,6 +114,7 @@ class LoginPage extends React.Component {
       700
     );
   }
+
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -74,6 +147,7 @@ class LoginPage extends React.Component {
                       <CustomInput
                         labelText="Email..."
                         id="email"
+                        onChange={this.handleSignInInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -88,7 +162,8 @@ class LoginPage extends React.Component {
                       />
                       <CustomInput
                         labelText="Password"
-                        id="pass"
+                        id="password"
+                        onChange={this.handleSignInInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -105,7 +180,7 @@ class LoginPage extends React.Component {
                       />
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button simple color="danger" size="lg">
+                      <Button simple color="danger" size="lg" onClick={this.handleSignIn.bind(this)}>
                         Log in
                       </Button>
                     </CardFooter>
@@ -123,7 +198,8 @@ class LoginPage extends React.Component {
                     <CardBody>
                       <CustomInput
                         labelText="First Name..."
-                        id="first"
+                        id="first_name"
+                        onChange={this.handleSignUpInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -138,7 +214,8 @@ class LoginPage extends React.Component {
                       />
                       <CustomInput
                         labelText="Last Name.."
-                        id="last"
+                        id="last_name"
+                        onChange={this.handleSignUpInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -154,6 +231,7 @@ class LoginPage extends React.Component {
                       <CustomInput
                         labelText="Email..."
                         id="email"
+                        onChange={this.handleSignUpInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -168,7 +246,8 @@ class LoginPage extends React.Component {
                       />
                       <CustomInput
                         labelText="Password"
-                        id="pass"
+                        id="password"
+                        onChange={this.handleSignUpInputChange.bind(this)}
                         formControlProps={{
                           fullWidth: true
                         }}
@@ -185,7 +264,7 @@ class LoginPage extends React.Component {
                       />
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button simple color="primary" size="lg">
+                      <Button simple color="primary" size="lg" onClick={this.handleSignUp.bind(this)}>
                         Get started
                       </Button>
                     </CardFooter>
@@ -200,4 +279,13 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withStyles(loginPageStyle)(LoginPage);
+function mapStateToProps(state) {
+  const { loggingIn } = state.authentication;
+  return {
+    loggingIn
+  };
+}
+
+const connectedLoginPage = connect(mapStateToProps)(withStyles(loginPageStyle)(LoginPage));
+
+export default connectedLoginPage; 

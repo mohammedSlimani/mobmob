@@ -9,13 +9,13 @@ export class Apk extends Component {
         return (
             <Card style={{ display: 'flex', flexDirection: 'row',width:'100%'}}>
                 <CardMedia
-                    image={require("../../assets/img/apk.png")}
+                    image={this.props.image}
                     style={{height:100,width:100}}
                 />
                 <CardContent>
-                    <Typography component="h5" variant="h5">Apk Title</Typography>
+                    <Typography component="h5" variant="h5">{this.props.title}</Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                        Description of the app
+                        {this.props.description}
                     </Typography>
                 </CardContent>
             </Card>
@@ -23,4 +23,4 @@ export class Apk extends Component {
     }
 }
 
-export default Apk
+export default Apk;

@@ -50,6 +50,14 @@ function HeaderLinks({ ...props }) {
           Login
             
           </Button>
+        <Button
+          color="transparent"
+          href="/"
+          className={classes.navLink}
+        >
+          Home
+
+          </Button>
         
       </ListItem>
     </List>
