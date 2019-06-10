@@ -22,9 +22,6 @@ ReactDOM.render(
       <Route path="/teacher" component={Teacher}/>
       <Route path="/parent" component={Parent}/>
       <Route exact path="/" component={LandingPage} />
-      <Redirect from="/admin" to="/admin/kids" />
-      <Redirect from="/parent" to="/parent/kids" />
-      <Redirect from="/teacher" to="/teacher/kids" />
     </Switch>
   </Router>,
   document.getElementById("root")

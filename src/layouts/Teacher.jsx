@@ -17,7 +17,7 @@ import logo from "../assets/img/e-mob.ico";
 const switchRoutes = (
   <Switch>
     {teacherRoutes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/teacher") {
         return (
           <Route
             path={prop.layout + prop.path}

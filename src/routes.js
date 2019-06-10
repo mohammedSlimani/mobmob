@@ -33,6 +33,7 @@ const adminRoutes = [
   {
     path : "/apps",
     name : "APPS",
+    icon: Dashboard,
     component :AppsListing,
     layout : "/admin"
   }
@@ -57,6 +58,7 @@ const teacherRoutes = [
     path : "/apps",
     name : "APPS",
     component :AppsListing,
+    icon: Dashboard,
     layout : "/teacher"
   }
 ];
@@ -75,6 +77,13 @@ const parentRoutes = [
     icon: Dashboard,
     component: DashboardPage,
     layout: "/parent"
+  },
+  {
+    path : "/apps",
+    name : "APPS",
+    icon: Dashboard,
+    component :AppsListing,
+    layout : "/parent"
   }
 ];
 export {
