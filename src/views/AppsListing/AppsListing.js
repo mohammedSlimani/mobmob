@@ -18,22 +18,12 @@ import { List, ListItem } from "@material-ui/core";
 import Apk from "../../components/Apk/Apk.js";
 
 class Dashboard extends React.Component {
-  state = {
-    value: 0
-  };
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
   render() {
     const { classes } = this.props;
     return (
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={8}>
+          <GridItem xs={12} sm={12} md={12}>
             <Card>
               <CardHeader color="warning">
                 <h4 className={classes.cardTitleWhite}>All Apps</h4>
@@ -52,7 +42,15 @@ class Dashboard extends React.Component {
                   <ListItem>
                     <Apk />
                   </ListItem>
-
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
                 </List>
               </CardBody>
             </Card>
