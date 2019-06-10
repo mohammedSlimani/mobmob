@@ -1,52 +1,70 @@
-import React, { Component } from 'react'
-import Header from '../../components/Header/Header';
-import HeaderLinks from '../../components/Header/HeaderLinks';
-import Parallax from '../../components/Parallax/Parallax';
-import GridContainer from '../../components/Grid/GridContainer';
-import GridItem from '../../components/Grid/GridItem';
-import Button from '../../components/CustomButtons/Button';
-import dashboardRoutes from '../../routes';
-import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage';
-import { withStyles } from '@material-ui/core';
-import Footer from '../../components/Footer/Footer';
-import classnames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+// @material-ui/core
+import withStyles from "@material-ui/core/styles/withStyles";
+// core components
+import GridItem from "../../components/Grid/GridItem.jsx";
+import GridContainer from "../../components/Grid/GridContainer.jsx";
+import Table from "../../components/Table/Table.jsx";
+import Card from "../../components/Card/Card.jsx";
+import CardHeader from "../../components/Card/CardHeader.jsx";
+import CardBody from "../../components/Card/CardBody.jsx";
+import CardAvatar from "../../components/Card/CardAvatar.jsx";
+import avatar from "../../assets/img/faces/morty.png";
+import Button from "../../components/CustomButtons/Button.jsx";
 
-export class AppsListing extends Component {
-    render() {
-        const { classes, ...rest } = this.props;
-        return (
-            <>
-                <Header
-                    color="transparent"
-                    routes={dashboardRoutes}
-                    brand="E-MOBADARA"
-                    rightLinks={<HeaderLinks />}
-                    fixed
-                    changeColorOnScroll={{
-                        height: 400,
-                        color: "white"
-                    }}
-                    {...rest}
-                />
-                <Parallax filter image={require("../../assets/img/apps-bg.jpg")}>
-                    <div className={classes.container}>
-                        <GridContainer>
-                            <GridItem xs={12} sm={12} md={6}>
-                                <h1 className={classes.title}>Our Apps</h1>
-                            </GridItem>
-                        </GridContainer>
-                    </div>
-                </Parallax>
-                <div className={classnames(classes.main, classes.mainRaised)}>
-                    <div className={classes.container}>
-                        
-                    </div>
-                </div>
-                <Footer />  
-            </>
-        )
-    }
+import dashboardStyle from "../../assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import { List, ListItem } from "@material-ui/core";
+import Apk from "../../components/Apk/Apk.js";
+
+class Dashboard extends React.Component {
+  state = {
+    value: 0
+  };
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
+  handleChangeIndex = index => {
+    this.setState({ value: index });
+  };
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={8}>
+            <Card>
+              <CardHeader color="warning">
+                <h4 className={classes.cardTitleWhite}>All Apps</h4>
+                <p className={classes.cardCategoryWhite}>
+                  These are all the apps developed by the students
+                </p>
+              </CardHeader>
+              <CardBody>
+                <List>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+                  <ListItem>
+                    <Apk />
+                  </ListItem>
+
+                </List>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </div>
+    );
+  }
 }
 
-export default withStyles(landingPageStyle)(AppsListing);
+Dashboard.propTypes = {
+  classes: PropTypes.object.isRequired
+};
 
+export default withStyles(dashboardStyle)(Dashboard);
