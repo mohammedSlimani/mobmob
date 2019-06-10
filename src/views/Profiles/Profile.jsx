@@ -34,7 +34,7 @@ const styles = {
   }
 };
 
-function AdminProfile(props) {
+function Profile(props) {
   const { classes } = props;
   return (
     <div>
@@ -175,4 +175,4 @@ function AdminProfile(props) {
   );
 }
 
-export default withStyles(styles)(AdminProfile);
+export default withStyles(styles)(Profile);
