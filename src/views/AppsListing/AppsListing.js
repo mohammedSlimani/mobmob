@@ -8,6 +8,8 @@ import Button from '../../components/CustomButtons/Button';
 import dashboardRoutes from '../../routes';
 import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage';
 import { withStyles } from '@material-ui/core';
+import Footer from '../../components/Footer/Footer';
+import classnames from 'classnames';
 
 export class AppsListing extends Component {
     render() {
@@ -30,23 +32,17 @@ export class AppsListing extends Component {
                     <div className={classes.container}>
                         <GridContainer>
                             <GridItem xs={12} sm={12} md={6}>
-                                <h1 className={classes.title}>Everyone Matters.</h1>
-                                <h4>
-                                    “Happiness is not something ready made. It comes from your own actions.” – Dalai Lama
-                                </h4>
-                                <br />
-                                <Button
-                                    color="danger"
-                                    size="lg"
-                                    href="/login"
-                                    rel="noopener noreferrer"
-                                >
-                                    Get Started
-                                </Button>
+                                <h1 className={classes.title}>Our Apps</h1>
                             </GridItem>
                         </GridContainer>
                     </div>
-                </Parallax>  
+                </Parallax>
+                <div className={classnames(classes.main, classes.mainRaised)}>
+                    <div className={classes.container}>
+                        
+                    </div>
+                </div>
+                <Footer />  
             </>
         )
     }
