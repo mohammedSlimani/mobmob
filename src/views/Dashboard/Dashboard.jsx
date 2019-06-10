@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
            <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>childrens</h4>
+                <h4 className={classes.cardTitleWhite}>children</h4>
                 <p className={classes.cardCategoryWhite}>
                   children's informations 
                 </p>

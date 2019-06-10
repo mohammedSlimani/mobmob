@@ -30,4 +30,12 @@ const dashboardRoutes = [
   },
 ];
 
+const teacherDashboard = [
+  {
+    path : "/user",
+    name : "Profile",
+    icon : Person,
+    component :"" ,//TODO: Add new Components for the Teacher.
+  }
+];
 export default dashboardRoutes;
