@@ -9,14 +9,14 @@ import "perfect-scrollbar/css/perfect-scrollbar.css";
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import Sidebar from "../components/Sidebar/Sidebar.jsx";
-import routes from "../routes.js";
+import {adminRoutes} from "../routes.js";
 import dashboardStyle from "../assets/jss/material-dashboard-react/layouts/dashboardStyle.jsx";
 import image from "../assets/img/sidebar-4.jpg";
 import logo from "../assets/img/e-mob.ico";
 
 const switchRoutes = (
   <Switch>
-    {routes.map((prop, key) => {
+    {adminRoutes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
           <Route
@@ -87,7 +87,7 @@ class Dashboard extends React.Component {
     return (
       <div className={classes.wrapper}>
         <Sidebar
-          routes={routes}
+          routes={adminRoutes}
           logoText={"E-MOBADARA STORE"}
           logo={logo}
           image={this.state.image}
