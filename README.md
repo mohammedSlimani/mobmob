@@ -1,4 +1,2 @@
 # mobmob
-Inspired by Creative tim (or rather stolen from him :p)
-
-Let's GOOO
+The Front end to the platform E-mobadra, Using the creative tim Kit.
