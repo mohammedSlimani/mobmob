@@ -9,16 +9,18 @@ import Person from "@material-ui/icons/Person";
 //import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "./views/Dashboard/Dashboard.jsx";
-import UserProfile from "./views/UserProfile/UserProfile.jsx";
+import Profile from "./views/Profiles/Profile.jsx";
+import TeacherKids from "./views/Dashboard/KidsList.jsx";
+import AppsListing from "./views/AppsListing/AppsListing";
 //import TableList from "./views/TableList/TableList.jsx";
 //import Icons from "./views/Icons/Icons.jsx";
 
-const dashboardRoutes = [
+const adminRoutes = [
   {
     path: "/user",
     name: "Profile",
     icon: Person,
-    component: UserProfile,
+    component: Profile,
     layout: "/admin"
   },
   {
@@ -28,6 +30,55 @@ const dashboardRoutes = [
     component: DashboardPage,
     layout: "/admin"
   },
+  {
+    path : "/apps",
+    name : "APPS",
+    component :AppsListing,
+    layout : "/admin"
+  }
 ];
 
-export default dashboardRoutes;
+const teacherRoutes = [
+  {
+    path : "/user",
+    name : "Profile",
+    icon : Person,
+    component :Profile,
+    layout : "/teacher"
+  },
+  {
+    path: "/kids",
+    name: "kids",
+    icon: Dashboard,
+    component: TeacherKids,
+    layout: "/teacher"
+  },
+  {
+    path : "/apps",
+    name : "APPS",
+    component :AppsListing,
+    layout : "/teacher"
+  }
+];
+
+const parentRoutes = [
+  {
+    path : "/user",
+    name : "Profile",
+    icon : Person,
+    component :Profile,
+    layout : "/parent"
+  },
+  {
+    path: "/kids",
+    name: "kids",
+    icon: Dashboard,
+    component: DashboardPage,
+    layout: "/parent"
+  }
+];
+export {
+  adminRoutes,
+  teacherRoutes,
+  parentRoutes
+};

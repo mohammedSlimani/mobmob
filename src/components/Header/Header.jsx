@@ -74,7 +74,7 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent = <Button className={classes.title}>
-                            <img src={require('../../assets/img/e-mob.ico')} height='40' width='40'/> {brand}
+                            <img alt="logo" src={require('../../assets/img/e-mob.ico')} height='40' width='40'/> {brand}
                           </Button>;
     return (
       <AppBar className={appBarClasses}>

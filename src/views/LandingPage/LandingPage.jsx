@@ -26,6 +26,7 @@ const dashboardRoutes = [];
 class LandingPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
+    console.dir(this.props);
     return (
       <div>
         <Header
@@ -52,7 +53,7 @@ class LandingPage extends React.Component {
                 <Button
                   color="danger"
                   size="lg"
-                  href="/login-page"
+                  href="/login"
                   rel="noopener noreferrer"
                 >
                   Get Started
